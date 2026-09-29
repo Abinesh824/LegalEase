@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LegalEase</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            margin:40px;
+        }
+
+        input, select{
+            width:300px;
+            padding:8px;
+            margin:5px;
+        }
+
+        button{
+            padding:10px 20px;
+        }
+
+        pre{
+            background:#f4f4f4;
+            padding:15px;
+            border-radius:5px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>LegalEase: AI-powered Legal Document Generator</h1>
+
+<form method="POST">
+
+    <label>Document Type</label><br>
+
+    <select name="doc_type">
+        <option value="nda">NDA</option>
+        <option value="employment">Employment Agreement</option>
+    </select>
+
+    <br><br>
+
+    <input type="text" name="party1" placeholder="Party 1" required><br>
+
+    <input type="text" name="party2" placeholder="Party 2" required><br>
+
+    <input type="text" name="purpose" placeholder="Purpose / Details" required><br>
+
+    <input type="date" name="date" required><br><br>
+
+    <button type="submit">Generate Document</button>
+
+</form>
+
+<h2>Generated Document</h2>
+
+<pre>{{ generated }}</pre>
+
+</body>
+</html>
